@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word</title>
+</head>
+<body>
+<center>
+    <h1>Welcome to my wordcount website</h1>
+    <form action="{% url 'count' %}" method="get">
+        <textarea name="txt" cols="40" rows="10"></textarea><br><br>
+        <input type="checkbox" name="chk1">Show Information
+        <input type="checkbox" name="chk2">Show word Count
+        <input type="checkbox" name="chk3">Show word count frequeancy
+        <input type="checkbox" name="chk4">Show para in uppercase
+        <input type="checkbox" name="chk5">remove special symbol
+        <br>
+        <input type="submit" value="show result">
+    </form>
+</center>
+</body>
+</html>

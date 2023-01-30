@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <script type="javascript/text">
+        var a1=document.getElementByName("t1")
+        var a2=document.getElementByName("t2")
+        if(a1=="" && a2=="" )
+        {
+            alert("Please fill the value");
+        }
+    </script>
+</head>
+<body>
+<h1 style="color:red">Welcome to Home Page</h1>
+<p>Hello {{name}}</p>
+<a href="{%url 'about'%}">Go to About....</a>
+<a href="{%url 'contact'%}">Go to contact</a>
+<br>
+<center>
+<h1>Django Calculator</h1>
+<form action="{% url 'home' %}" method="POST">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>
+                Enter Value1:
+            </td>
+            <td>
+                <input type="text" name="t1" autocomplete="off" value="{{n1}}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter Value2:
+            </td>
+            <td>
+                <input type="text" name="t2" autocomplete="off" value="{{n2}}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <button type="submit" name="btn" value="add">Addition</button>
+
+                <button type="submit" name="btn" value="sub">Subtraction</button>
+
+                <button type="submit" name="btn" value="mul">Multiplication</button>
+
+                <button type="submit" name="btn" value="div">Division</button>
+            </td>
+        </tr>
+
+        <tr>
+
+        </tr>
+
+
+
+    </table>
+    <p>Result:  {{result}}</p>
+</form>
+</center>
+</body>
+</html>
